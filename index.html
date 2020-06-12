@@ -56,7 +56,7 @@
       <Scene> 
         
         <sound>
-          <audioClip id="meme" url='textures/music.mp3' loop='false' enabled='false'></audioClip>
+          <audioClip id="meme" url='textures/music.mp3' loop='true' enabled='false'></audioClip>
         </sound>
 
          <DirectionalLight id="directional" direction='1 0 -1' on ="TRUE" intensity='0.4' shadowIntensity='0.2'> </DirectionalLight> 
@@ -370,7 +370,7 @@
     <TimeSensor id = "Time_1" DEF="Time_1" cycleInterval='1.5' loop='true' enabled = 'false'></TimeSensor>
     <TimeSensor id = "Time_2" DEF="Time_2" cycleInterval='1.5' loop='true' enabled = 'false'></TimeSensor>
   <!--Rotation-->
-       <OrientationInterpolator DEF='OrInt_right1' key='0 .2 .4 .6 .8 .9 1' keyValue='0 0 1 0, 0 0 1 .23, 0 0 1 .46, 0 0 1 .72, 0 0 1 .46, 0 0 1 .23, 0 0 1 0'></OrientationInterpolator>
+      <OrientationInterpolator DEF='OrInt_right1' key='0 .2 .4 .6 .8 .9 1' keyValue='0 0 1 0, 0 0 1 .23, 0 0 1 .46, 0 0 1 .72, 0 0 1 .46, 0 0 1 .23, 0 0 1 0'></OrientationInterpolator>
       <OrientationInterpolator DEF='OrInt_left1' key='0 .2 .4 .6 .8 .9 1' keyValue='0 0 1 0, 0 0 1 -.23, 0 0 1 -.46, 0 0 1 -.72, 0 0 1 -.46, 0 0 1 -.23, 0 0 1 0'></OrientationInterpolator>
       <OrientationInterpolator DEF='OrInt_right2' key='0 .2 .4 .6 .8 .9 1' keyValue='0 0 1 0, 0 0 1 .23, 0 0 1 .46, 0 0 1 .72, 0 0 1 .46, 0 0 1 .23, 0 0 1 0'></OrientationInterpolator>
       <OrientationInterpolator DEF='OrInt_left2' key='0 .2 .4 .6 .8 .9 1' keyValue='0 0 1 0, 0 0 1 -.23, 0 0 1 -.46, 0 0 1 -.72, 0 0 1 -.46, 0 0 1 -.23, 0 0 1 0'></OrientationInterpolator>
@@ -379,6 +379,7 @@
       <PositionInterpolator DEF='PosInt_Ball_left1' key='0 .2 .4 .6 .8 .9 1' keyValue='0 0 0, -.36 .05 0, -.7 .187 0, -1 .41 0, -.7 .187 0, -.36 .05 0, 0 0 0'></PositionInterpolator>
       <PositionInterpolator DEF='PosInt_Ball_right2' key='0 .2 .4 .6 .8 .9 1' keyValue='0 0 0, .36 .05 0, .7 .187 0, 1 .41 0, .7 .187 0, .36 .05 0, 0 0 0'></PositionInterpolator>
       <PositionInterpolator DEF='PosInt_Ball_left2' key='0 .2 .4 .6 .8 .9 1' keyValue='0 0 0, -.36 .05 0, -.7 .187 0, -1 .41 0, -.7 .187 0, -.36 .05 0, 0 0 0'></PositionInterpolator>
+
 
       <!--Balls-->
         <ROUTE fromNode='Time_1' fromField='fraction_changed' 
@@ -437,8 +438,8 @@
         <ROUTE fromNode="OrInt_left2" fromField="value_changed"
                 toNode="Ropes_left2" toField="set_rotation">
         </ROUTE>
-            
-             
+     
+     
       </Scene>
     </X3D>  
   </body>
